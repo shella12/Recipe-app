@@ -1,4 +1,5 @@
-Rails.application.routes.draw do  
+Rails.application.routes.draw do
+  devise_for :users 
   get 'recipes'  => 'recipes#index', as: :recipes
   get 'recipes/:id' => 'recipes#show', as: :recipes_detail
   delete 'recipes/:id' => 'recipes#destroy', as: :recipes_destroy
@@ -16,4 +17,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  root "users#index"
+  resources :users, only: [:index, :show]
 end

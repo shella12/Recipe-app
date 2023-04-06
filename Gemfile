@@ -11,6 +11,10 @@ gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
+# Add gem devise
+
+gem 'devise'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
@@ -54,6 +58,8 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 end
+
+gem 'dotenv-rails', groups: %i[development test production]
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
