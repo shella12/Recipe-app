@@ -1,4 +1,17 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do  
+  get 'recipes'  => 'recipes#index', as: :recipes
+  get 'recipes/:id' => 'recipes#show', as: :recipes_detail
+  delete 'recipes/:id' => 'recipes#destroy', as: :recipes_destroy
+  get 'recipes/new'
+  get 'recipes/create'
+
+  get 'recipes/:id'  => 'recipes#update', as: :recipes_update
+
+  # resources :recipes do
+  #   patch 'update_public', on: :member
+  # end
+  
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

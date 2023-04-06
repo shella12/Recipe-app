@@ -1,0 +1,15 @@
+<h1>Recipe <%=@recipe.id%></h1>
+<p>Preparation time: <%=@recipe.preparationTime%> hours</p>
+
+<%= form_with model: @recipes do |form| %>
+ 
+     <%= form.check_box :public, { checked: @recipe.public, checked_value: true, unchecked_value: false }
+     %>
+    
+<% end %>
+
+<p>Cooking time: <%=@recipe.cookingTime%> hours</p>
+<p>Steps: <br><%=@recipe.description%></p>
+<%=link_to "Generate shopping list", recipes_detail_path(@recipe.id)%>
+<%=link_to "Add Ingredients", recipes_detail_path(@recipe.id)%>
+<hr>

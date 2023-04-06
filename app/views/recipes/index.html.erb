@@ -1,0 +1,9 @@
+<%@recipes.each_with_index do |recipe, index|%>
+<li>
+<%=link_to recipes_detail_path(recipe.id) do%>
+<h1>Recipe <%=index%></h1>
+<%end%>
+<%= link_to "Remove", recipes_destroy_path(recipe.id), method: :delete %>
+<p><%=recipe.description%></p>
+
+<%end%>
