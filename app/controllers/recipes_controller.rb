@@ -3,11 +3,9 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all.where(user: current_user)
   end
 
-  def new
-  end
+  def new; end
 
-  def create
-  end
+  def create; end
 
   def show
     @recipe = Recipe.find(params[:id])
@@ -22,7 +20,7 @@ class RecipesController < ApplicationController
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
-    flash[:success] = "The recipe has been removed successfully."
+    flash[:success] = 'The recipe has been removed successfully.'
     redirect_to recipes_url
   end
 end
