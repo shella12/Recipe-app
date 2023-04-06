@@ -3,11 +3,14 @@
 <div  class="d-flex justify-content-between" >
 <p>Preparation time: <%=@recipe.preparationTime%> hours</p>
 
-<%= form_with model: @recipes do |form| %>
- 
-     <%= form.check_box :public, { checked: @recipe.public, checked_value: true, unchecked_value: false }
-     %>
-    
+<%= form_with(model: @recipes, local: true) do |form| %>
+ <div class="custom-control custom-switch">
+    <%= form.check_box :public, class: "custom-control-input", id: "customSwitch1"   %>
+  <label class="custom-control-label" for="customSwitch1">Public: </label>
+ </div>
+ <div class="actions">
+     <%= form.submit %>
+ </div>
 <% end %>
 </div>
 

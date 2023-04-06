@@ -2,12 +2,14 @@
 
 <div class="recipes-list">
 <%@recipes.each_with_index do |recipe, index|%>
+<%= stylesheet_link_tag 'style' %>
 <div class="recipe">
 <div class="recipe-links">
 
 <%=link_to "Recipe #{index+1}", recipes_detail_path(recipe.id), class: "recipe-number"%>
-<%= link_to "Remove", recipes_destroy_path(recipe.id),class: "remove-link" , method: :delete %>
-
+<% if can? :destroy, recipe %>
+    <%= link_to "Remove", recipes_destroy_path(recipe.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+<% end %>
 </div>
 <p><%=recipe.description%></p>
 </div>
