@@ -1,4 +1,6 @@
-<h1><%=@recipe.name%></h1>
+<div class="d-flex flex-column justify-content-center p-4">
+<h1 class="h1 heading  align-self-center"><%=@recipe.name%></h1>
+<div  class="d-flex justify-content-between" >
 <p>Preparation time: <%=@recipe.preparationTime%> hours</p>
 
 <%= form_with model: @recipes do |form| %>
@@ -7,9 +9,13 @@
      %>
     
 <% end %>
+</div>
 
 <p>Cooking time: <%=@recipe.cookingTime%> hours</p>
 <p>Steps: <br><%=@recipe.description%></p>
+<div class="d-flex justify-content-between" >
 <%=link_to "Generate shopping list", recipes_detail_path(@recipe.id)%>
 <%=link_to "Add Ingredients", recipes_detail_path(@recipe.id)%>
+</div>
 <hr>
+</div>

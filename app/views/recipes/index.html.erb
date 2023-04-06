@@ -1,9 +1,15 @@
-<%@recipes.each_with_index do |recipe, index|%>
-<li>
-<%=link_to recipes_detail_path(recipe.id) do%>
-<h1>Recipe <%=index+1%></h1>
-<%end%>
-<%= link_to "Remove", recipes_destroy_path(recipe.id), method: :delete %>
-<p><%=recipe.description%></p>
 
+
+<div class="recipes-list">
+<%@recipes.each_with_index do |recipe, index|%>
+<div class="recipe">
+<div class="recipe-links">
+
+<%=link_to "Recipe #{index+1}", recipes_detail_path(recipe.id), class: "recipe-number"%>
+<%= link_to "Remove", recipes_destroy_path(recipe.id),class: "remove-link" , method: :delete %>
+
+</div>
+<p><%=recipe.description%></p>
+</div>
 <%end%>
+</div>
