@@ -1,16 +1,13 @@
+<%= javascript_include_tag "recipe" %>
 <div class="d-flex flex-column justify-content-center p-4">
 <h1 class="h1 heading  align-self-center"><%=@recipe.name%></h1>
 <div  class="d-flex justify-content-between" >
 <p>Preparation time: <%=@recipe.preparationTime%> hours</p>
 
-<%= form_with(model: @recipes, local: true) do |form| %>
+<%= form_with model: @recipes, url: toggle_public_path , id: 'toggle', method: :post do |form| %>
 
-    <%= form.check_box :public, class: "custom-control-input", id: "customSwitch1"   %>
+    <%= form.check_box :public, {checked: @recipe.public},true,false %>
   <label class="custom-control-label" for="customSwitch1">Public: </label>
- 
- <div class="actions">
-     <%= form.submit "Public" %>
- </div>
 <% end %>
 </div>
 
