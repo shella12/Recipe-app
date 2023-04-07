@@ -34,9 +34,9 @@ class FoodsController < ApplicationController
     else
       flash[:error] = 'Food deletion failed!'
     end
-    redirect_to user_foods_path(current_user) 
+    redirect_to user_foods_path(current_user)
   end
-  
+
   private
 
   def food_params
