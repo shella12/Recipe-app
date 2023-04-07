@@ -5,9 +5,12 @@
 <p>Preparation time: <%=@recipe.preparationTime%> hours</p>
 
 <%= form_with model: @recipes, url: toggle_public_path , id: 'toggle', method: :post do |form| %>
-
-    <%= form.check_box :public, {checked: @recipe.public},true,false %>
-  <label class="custom-control-label" for="customSwitch1">Public: </label>
+<div class="form-check form-switch">
+ <%= form.label :public, class: "form-check-label mr-3" do %>
+    <%= form.check_box :public, {checked: @recipe.public, class: "form-check-input"},true,false %>
+  Public
+  <%end%>
+  </div>
 <% end %>
 </div>
 
