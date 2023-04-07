@@ -16,7 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_05_092923) do
 
   create_table "foods", force: :cascade do |t|
     t.string "name"
-    t.integer "measurement_unit"
+    t.string "measurement_unit"
     t.decimal "price"
     t.integer "quantity"
     t.bigint "user_id", null: false
