@@ -44,3 +44,8 @@ div.recipes-list .recipe {
   color: #fff;
   background-color: #ea2409;
 }
+
+.form-check-input:checked {
+  background-color: #20c997;
+  border-color: #20c997;
+}
