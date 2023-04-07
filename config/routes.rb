@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'recipes/new'
   get 'recipes/create'
 
-  get 'recipes/:id'  => 'recipes#update', as: :recipes_update
+  get 'recipes/:id/toggle'  => 'recipes#toggle', as: :toggle_public
 
   # resources :recipes do
   #   patch 'update_public', on: :member

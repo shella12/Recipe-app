@@ -4,12 +4,12 @@
 <p>Preparation time: <%=@recipe.preparationTime%> hours</p>
 
 <%= form_with(model: @recipes, local: true) do |form| %>
- <div class="custom-control custom-switch">
+
     <%= form.check_box :public, class: "custom-control-input", id: "customSwitch1"   %>
   <label class="custom-control-label" for="customSwitch1">Public: </label>
- </div>
+ 
  <div class="actions">
-     <%= form.submit %>
+     <%= form.submit "Public" %>
  </div>
 <% end %>
 </div>
