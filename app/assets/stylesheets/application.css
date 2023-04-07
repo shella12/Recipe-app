@@ -14,14 +14,14 @@
  *= require_self
  */
 
- * {
-    margin: 0px;
-    padding: 0px;
+ *{
+  margin: 0px;
+  padding: 0px;
  }
 
- body {
-    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.athletadesk.com%2Fjoin-free%2Fjoin-background%2F&psig=AOvVaw2C-DQNgLEVtrNI70FTZ63F&ust=1680936223745000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPCtzceVl_4CFQAAAAAdAAAAABAF);
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: 'Times New Roman', Times, serif;
+ body{
+  background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.athletadesk.com%2Fjoin-free%2Fjoin-background%2F&psig=AOvVaw2C-DQNgLEVtrNI70FTZ63F&ust=1680936223745000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPCtzceVl_4CFQAAAAAdAAAAABAF);
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Times New Roman', Times, serif;
  }
