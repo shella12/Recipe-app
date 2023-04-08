@@ -46,7 +46,7 @@ RSpec.describe FoodsController, type: :controller do
 
           it 'sets a flash message' do
             post :create, params: valid_params
-            expect(flash[:success]).to eq('Food successfully added!')
+            expect(flash[:success]).to eq('Food successfully added')
           end
         end
 
