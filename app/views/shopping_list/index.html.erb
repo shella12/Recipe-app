@@ -1,0 +1,39 @@
+<div class="container py-6">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      <div class="text-center">
+        <h1 class="font-bold bg-gray-800 text-dark py-2 rounded-md fs-4">Shopping List</h1>
+        <div class='d-flex justify-content-center my-5 align-items-center gap-3 text-gray-900'>
+          <span class="text-uppercase">Amount of items to buy: <span class="fw-bold"><%= @general_shopping_list.count%></span> </span>
+          <span class="text-uppercase">Total price: <span class="fw-bold"><%= @total%></span></span>
+        </div>
+        <table class="table table-bordered table-striped mt-4">
+          <thead class="bg-gray-800 text-dark">
+            <tr class="text-center">
+              <th class="px-3 py-2 ">Food</th>
+              <th class="px-3 py-2">Quantity</th>
+              <th class="px-3 py-2">Price</th>
+            </tr>
+          </thead>
+          <% if @general_shopping_list.empty? %>
+            <tbody>
+              <tr class="border-bottom">
+                <td colspan="3" class="px-3 py-2 text-center text-danger fw-bold">You don't have to buy anything!!</td>
+              </tr>
+            </tbody>
+          <% else %>
+            <tbody class="text-sm font-light">
+              <% @general_shopping_list.each do |food| %>
+                <tr class="border-bottom hover">
+                  <td class="px-3 py-2"><%= food[:name] %></td>
+                  <td class="px-3 py-2"><%= food[:quantity] %></td>
+                  <td class="px-3 py-2"><%= "$ #{food[:price] * food[:quantity]}" %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

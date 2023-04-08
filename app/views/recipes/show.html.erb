@@ -18,7 +18,7 @@
 <p>Cooking time: <%=@recipe.cookingTime%> hours</p>
 <p>Steps: <br><%=@recipe.description%></p>
 <div class="d-flex justify-content-between" >
-<%=link_to "Generate shopping list", recipes_detail_path(@recipe.id)%>
+<%=link_to "Generate shopping list", general_shopping_list_path(@recipe)%>
 <% if can? :update, @recipe %>
 <%=link_to "Add Ingredients", new_ingredients_path(@recipe.id)%>
 <% end %>
