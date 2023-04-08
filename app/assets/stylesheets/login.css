@@ -1,96 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
-*{
-    font-family: 'poppins' ,sans-serif;
-    margin: 0px;
-    padding: 0px;
+
+* {
+  font-family: 'poppins', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-}
-.container{
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    padding: 0 15px 0 15px;
-    
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
 }
 
-header{
-    color: #fff;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0 10px 0;
+.container {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px 0 15px;
 }
 
-.input-field .input{
-    height: 45px;
-    width: 87%;
-    border: none;
-    /* border-radius: 30px; */
-    color: #fff;
-    font-size: 15px;
-    padding: 0 0 0 45px;
-    margin-bottom: 20px;
-    background: rgba(255,255,255,0.1);
-    outline: none;
-}
-.icon{
-    position: relative;
-    top: -33px;
-    left: 17px;
-    color: #fff;
-}
-::-webkit-input-placeholder{
-    color: #fff;
-}
-.submit{
-    border: none;
-    /* border-radius: 30px; */
-    font-size: 15px;
-    height: 45px;
-    outline: none;
-    width: 100%;
-    color: black;
-    background: rgba(255,255,255,0.7);
-    cursor: pointer;
-    transition: .3s ;
-}
-.submit:hover{
-    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
-}
-.two-col{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color: #fff;
-    font-size: small;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #fff;
-}
-.one{
-    display: flex;
-}
-.add_food{
-    color: rgb(7, 29, 124);
-    text-decoration: none;
-    font-size: 28px;
-    font-family: 'poppins' ,sans-serif;
-    border: 3px solid rgb(7, 29, 124);
-    
+header {
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 10px 0;
 }
 
-.food_list{
-    margin-bottom: 4%;
-    padding-top: 8%;
+.input-field .input {
+  height: 45px;
+  width: 87%;
+  border: none;
+
+  /* border-radius: 30px; */
+  color: #fff;
+  font-size: 15px;
+  padding: 0 0 0 45px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
 }
 
-.submite{
-    border-radius: 30px; 
-    width: 10%;
+.icon {
+  position: relative;
+  top: -33px;
+  left: 17px;
+  color: #fff;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.submit {
+  border: none;
+
+  /* border-radius: 30px; */
+  font-size: 15px;
+  height: 45px;
+  outline: none;
+  width: 100%;
+  color: black;
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit:hover {
+  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
+.two-col {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #fff;
+  font-size: small;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.one {
+  display: flex;
+}
+
+.add_food {
+  color: rgb(7, 29, 124);
+  text-decoration: none;
+  font-size: 28px;
+  font-family: 'poppins', sans-serif;
+  border: 3px solid rgb(7, 29, 124);
+}
+
+.food_list {
+  margin-bottom: 4%;
+  padding-top: 8%;
+}
+
+.submite {
+  border-radius: 30px;
+  width: 10%;
 }
