@@ -6,6 +6,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :trackable
-  # has_many :recipes, dependent: :destroy
-  # has_many :foods, dependent: :destroy
+  def general_shopping_list(recipe_foods)
+    all_foods = foods
+    missing_foods = all_foods.reject { |food| recipe_foods.any? { |hash| hash[:name] == food.name } }
+    total = missing_foods.sum { |food| food[:price] * food[:quantity] }
+    [missing_foods, total]
+  end
 end
