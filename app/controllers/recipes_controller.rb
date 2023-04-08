@@ -5,7 +5,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
-    @recipes_food=RecipeFood.all.where(recipe: @recipe)
+    @recipes_food = RecipeFood.all.where(recipe: @recipe)
   end
 
   def destroy
@@ -18,5 +18,4 @@ class RecipesController < ApplicationController
     @recipe.toggle!(:public)
     redirect_to recipes_detail_path(params[:id])
   end
-
 end

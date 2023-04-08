@@ -5,16 +5,16 @@ class RecipeFoodsController < ApplicationController
   end
 
   def create
-    foods = params[:food] 
+    foods = params[:food]
     foods = foods.map { |food| Food.find(food) }
     quantities = params[:quantity]
     selected_checkboxes = foods.zip(quantities)
-   selected_checkboxes.each do |food|
-    puts food
-    @save= RecipeFood.new(food: food[0], recipe: Recipe.find(params[:id]), quantity: food[1].to_i)
-    puts @save.errors.full_messages unless @save.save 
-  end
-    redirect_to recipes_detail_path(params[:id]), notice: "Ingredients have been added"
+    selected_checkboxes.each do |food|
+      puts food
+      @save = RecipeFood.new(food: food[0], recipe: Recipe.find(params[:id]), quantity: food[1].to_i)
+      puts @save.errors.full_messages unless @save.save
+    end
+    redirect_to recipes_detail_path(params[:id]), notice: 'Ingredients have been added'
   end
 
   def edit
