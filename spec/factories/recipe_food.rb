@@ -5,4 +5,3 @@ FactoryBot.define do
       food
     end
   end
-  
