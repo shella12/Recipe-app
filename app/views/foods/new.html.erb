@@ -1,28 +1,47 @@
-<div class="py-6">
-  <div class="px-4 sm:px-6 lg:px-8">
-    <div class="text-left">
-      <h1 class="font-bold text-center">Add Food</h1>
-      <%= form_with model: @food, url: user_foods_path, method: :post, data: { turbo: false } do |f| %>
-        <div class="mb-4">
-          <%= f.label :name, "Food name",class: "block text-gray-700" %>
-          <%= f.text_field :name, class: "shadow" %>
+<%= stylesheet_link_tag 'login', 'bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+  <style>
+    body {
+      background-image: url('<%= asset_path('3.jpg') %>');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+  </style>
+
+ <div class=" box">
+ <div class="container">
+ <div class="top">
+   <header>Add Food</header>
+ </div>
+    <%= form_with model: @food, url: user_foods_path, method: :post, data: { turbo: false } do |f| %>
+        <div class="field input-field">
+          <%= f.label :name, "Food name", class: "text-white" %><br />
+          <%= f.text_field :name, class: "input" %>
         </div>
-        <div class="mb-4">
-          <%= f.label :measurement_unit, class: "block text-gray-700 font-bold mb-2" %>
+
+
+     <div class="field input-field">
+          <%= f.label :measurement_unit , class: "text-white" %>
           <%= f.select :measurement_unit, options_for_select([['Please choose unit', 'option'],['kg', 'kg'], ['g', 'g'], ['lb', 'lb']]), {}, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
         </div>
-        <div class="mb-4">
-          <%= f.label :price, "Unit price",class: "block text-gray-700 font-bold mb-2" %>
-          <%= f.number_field :price, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+
+        <div class="field input-field">
+          <%= f.label :price, "Unit price" , class: "text-white" %><br />
+          <%= f.number_field :price, class: "input" %>
         </div>
-        <div class="mb-4">
-          <%= f.label :quantity, class: "block text-gray-700 font-bold mb-2" %>
-          <%= f.number_field :quantity, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+
+     <div class="field input-field">
+          <%= f.label :quantity , class: "text-white"  %><br />
+          <%= f.number_field :quantity, class: "input" %>
         </div>
-        <div class="flex items-center justify-between">
-          <%= f.submit "Add Food", class: "bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+
+            <div class="field input-field">
+          <%= f.submit "Add Food", class: " submit submite" %>
         </div>
-      <% end %>
-    </div>
-  </div>
-</div>
+
+
+    <% end %>
+ </div>
+ </div>

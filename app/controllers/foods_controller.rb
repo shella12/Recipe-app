@@ -18,10 +18,10 @@ class FoodsController < ApplicationController
     @food = Food.new(food_params)
     @food.user = current_user
     if @food.save
-      flash[:success] = 'Food successfully added'
-      redirect_to user_foods_path(current_user, @food)
+      flash[:success] = 'Food successfully added!'
+      redirect_to user_foods_path(current_user)
     else
-      flash.now[:error] = 'Food was not added successfully'
+      flash.now[:error] = 'Food creation failed!'
       render :new
     end
   end
