@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'recipe_foods/new'
   get 'recipe_foods/create'
   devise_for :users 
+  get 'public_recipes' => 'recipes#public_recipes', as: :public_recipes
   get 'recipes'  => 'recipes#index', as: :recipes
   get 'recipes/:id' => 'recipes#show', as: :recipes_detail
   delete 'recipes/:id' => 'recipes#destroy', as: :recipes_destroy
