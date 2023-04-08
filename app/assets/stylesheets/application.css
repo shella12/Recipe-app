@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
 }
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -18,4 +19,3 @@
  *= require_tree .
  *= require_self
  */
-
