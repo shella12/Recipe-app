@@ -18,4 +18,8 @@ class RecipesController < ApplicationController
     @recipe.toggle!(:public)
     redirect_to recipes_detail_path(params[:id])
   end
+
+  def public_recipes
+    @recipes = Recipe.all.where(public: true)
+  end
 end
