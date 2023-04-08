@@ -17,5 +17,4 @@ class Recipe < ApplicationRecord
     foods.length
   end
   scope :public_recipes, -> { where(public: true).order(created_at: :desc) }
-  
 end

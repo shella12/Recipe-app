@@ -4,5 +4,4 @@ class RecipeFood < ApplicationRecord
 
   validates :quantity, presence: true
   validates :food, presence: true
-
 end
