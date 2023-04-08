@@ -1,5 +1,4 @@
 <%= stylesheet_link_tag 'login', media: 'all', 'data-turbolinks-track': 'reload' %>
-<#%= stylesheet_link_tag 'login', 'bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
 <div class="two-col">
    <div class="two">
     <%- if controller_name != 'sessions' %>
@@ -10,7 +9,7 @@
 
    <div class="field input-field">
      <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-     <%= link_to "Sign up", new_registration_path(resource_name) %><br />
+     <%= link_to "Sign up", new_registration_path(resource_name)  %><br />
     <% end %>
     </div>
 <div class="two-col">
