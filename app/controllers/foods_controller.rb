@@ -1,7 +1,6 @@
 class FoodsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    # @user = User.first
     @foods = Food.find_by(user_id: params[:id])
   end
 
