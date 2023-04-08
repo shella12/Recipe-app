@@ -3,18 +3,9 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all.where(user: current_user)
   end
 
-  def new; end
-
-  def create; end
-
   def show
     @recipe = Recipe.find(params[:id])
-  end
-
-  def update
-    puts "#{params[:public]} Public params"
-    @recipe.update(public: params[:public])
-    redirect_to recipes_detail_path(params[:id])
+    @recipes_food=RecipeFood.all.where(recipe: @recipe)
   end
 
   def destroy
@@ -27,4 +18,5 @@ class RecipesController < ApplicationController
     @recipe.toggle!(:public)
     redirect_to recipes_detail_path(params[:id])
   end
+
 end

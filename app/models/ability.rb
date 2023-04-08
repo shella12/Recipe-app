@@ -8,7 +8,7 @@ class Ability
 
     return unless user.present?
 
-    can %i[read create destroy], Recipe, user:
+    can %i[read create update destroy], Recipe, user:
 
     # return unless user.present?
     # can :read, :all

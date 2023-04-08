@@ -1,0 +1,13 @@
+<div class="container-fluid">
+<%= form_with model: @recipe_food, url: update_ingredients_path(id: params[:id], ingredient_id: params[:ingredient_id]), method: :patch do |f| %>
+<h1 class="h3">Edit quantity of ingredient</h1>
+<h2 class="h5"><%=@recipe_food.food.name%></h2>
+  <div class="form-control">
+ <%= f.label :food, class: "form-check-label mr-3" do %>
+   <input type="number" name="quantity" class= "form-control" placeholder= "Enter quantity"/>
+    Quantity
+  <%end%>
+  </div>
+<%= f.submit "Edit", class: "btn btn-primary" %>
+<% end %>
+</div>
