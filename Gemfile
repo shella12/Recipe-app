@@ -71,7 +71,6 @@ group :development do
   # gem "spring"
 end
 
-
 group :development, :test do
   # The RSpec testing framework
   gem 'rspec-rails'
@@ -81,10 +80,8 @@ group :development, :test do
 
   # The following gems aids with the nuts and bolts
   # of interacting with the browser.
-  gem 'webdrivers'
-  gem 'shoulda-matchers', '~> 5.0'
-  gem 'faker'
   gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'shoulda-matchers', '~> 5.0'
+  gem 'webdrivers'
 end
-
-
