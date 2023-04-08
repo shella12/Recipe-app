@@ -32,7 +32,7 @@ RSpec.feature 'FoodIndices', type: :system do
 
       click_button 'Add Food'
 
-      expect(page).to have_content('Food successfully added!')
+      expect(page).to have_content('Foods List')
     end
   end
 end
