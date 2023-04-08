@@ -71,9 +71,20 @@ group :development do
   # gem "spring"
 end
 
-group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+
+group :development, :test do
+  # The RSpec testing framework
+  gem 'rspec-rails'
+
+  # Capybara, the library that allows us to interact with the browser using Ruby
   gem 'capybara'
-  gem 'selenium-webdriver'
+
+  # The following gems aids with the nuts and bolts
+  # of interacting with the browser.
   gem 'webdrivers'
+  gem 'shoulda-matchers', '~> 5.0'
+  gem 'faker'
+  gem 'factory_bot_rails'
 end
+
+
