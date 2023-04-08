@@ -1,18 +1,22 @@
 <div class="container-fluid">
 <%= form_with(model: @recipe_food, url: add_ingredients_path(params[:id])) do |f| %>
-<div class="d-flex justify-content-between">
+
+<div class="d-flex justify-content-between align-items-center">
 <h1 class="h3">Add New Ingredients</h1>
-<%= link_to "Add Food", new_user_food_path(user_id: current_user.id), class: "btn btn-primary" %>
+<%= link_to "Add Food", new_user_food_path(user_id: current_user.id), class: "btn btn-success" %>
 </div>
+
 <div class="form-group">
 <%@food.each do |ingredient|%>
-  <div class="form-control">
+ 
+  <div class="form-inline mb-3">
  <%= f.label :food, class: "form-check-label mr-3" do %>
     <input type="checkbox" name="food[]" value="<%=ingredient.id%>">
   <%=ingredient.name%>
   <%end%>
    <input type="number" name="quantity[]" class= "form-control" placeholder= "Enter quantity"/>
   </div>
+
 <%end%>
 <%= f.submit "Add Ingredient", class: "btn btn-primary" %>
 <% end %>

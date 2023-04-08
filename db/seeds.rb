@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
 first_user = User.create([{name: "Zuhra"}])
 second_user = User.create([{name: "Hashimi"}])
 
@@ -17,3 +19,4 @@ recipe_food2 = RecipeFood.create(quantity: 1, recipe_id: recipe2.id, food_id: ap
 recipe_food3 = RecipeFood.create(quantity: 1, recipe_id: recipe3.id, food_id: orange.id)
 recipe_food4 = RecipeFood.create(quantity: 1, recipe_id: recipe1.id, food_id: apple.id)
 recipe_food5 = RecipeFood.create(quantity: 100, recipe_id: recipe2.id, food_id: onion.id)
+
