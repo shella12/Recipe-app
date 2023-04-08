@@ -24,4 +24,5 @@ Rails.application.routes.draw do
   resources :users do
     resources :foods, only: [:index, :show, :new, :create, :destroy]
   end
+  get '/general_shopping_list/:recipe_id', to: 'shopping_list#index', as: 'general_shopping_list'
 end
