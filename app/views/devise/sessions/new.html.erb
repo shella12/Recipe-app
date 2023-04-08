@@ -1,0 +1,46 @@
+
+<%= stylesheet_link_tag 'login', 'bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+  <style>
+    body {
+      background-image: url('<%= asset_path('1.jpg') %>');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+  </style>
+
+
+ <div class=" box">
+ <div class="container">
+ <div class="top">
+     <header>Login</header>
+ </div>
+ <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field input-field">
+    <%= f.text_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "input" %>
+      <i class='bx bx-user icon' ></i>
+  </div>
+
+  <div class=" field input-field">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "input" %>
+      <i class='bx bx-lock-alt'></i>
+  </div>
+
+
+  <div class="actions input-field">
+    <%= f.submit "Log in", class: "submit" %>
+  </div>
+   <%= render "devise/shared/links" %>
+ <% end %>
+ </div>
+ </div>
+   
+
+
+
+
+
+
+
