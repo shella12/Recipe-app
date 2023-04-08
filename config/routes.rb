@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'public_recipes' => 'recipes#public_recipes', as: :public_recipes
   get 'recipes'  => 'recipes#index', as: :recipes
   get 'recipes/:id' => 'recipes#show', as: :recipes_detail
+  post 'recipes' => 'recipes#new', as: :new_recipe
+  post 'recipes/create' => 'recipes#create', as: :add_new_recipe
   delete 'recipes/:id' => 'recipes#destroy', as: :recipes_destroy
   post 'recipes/:id/toggle'  => 'recipes#toggle', as: :toggle_public
   get 'recipes/:id/new' => 'recipe_foods#new', as: :new_ingredients

@@ -1,6 +1,7 @@
 
 
 <div class="recipes-list">
+<%=button_to "Add Recipe", new_recipe_path(current_user.id), class: "btn btn-success m-3"%>
 <%@recipes.each_with_index do |recipe, index|%>
 <%= stylesheet_link_tag 'style' %>
 <div class="recipe">
@@ -14,4 +15,5 @@
 <p><%=recipe.description%></p>
 </div>
 <%end%>
+
 </div>

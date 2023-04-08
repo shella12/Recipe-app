@@ -1,0 +1,36 @@
+<div class="container-fluid">
+<%= form_with model: @recipe_food, url: add_new_recipe_path ,data: { turbo: false } do |f| %>
+
+<h1 class="h3">Add New Recipe</h1>
+
+<div class="form-group">
+ 
+  <div class="form-inline mb-3">
+     <%= f.label :name, class: "form-label mr-3" do %>
+       Name
+       <input type="text" name="name" class= "form-control">
+     <%end%>
+  </div>
+  <div class="form-inline mb-3">
+     <%= f.label :name, class: "form-label mr-3" do %>
+       Preparation Time
+       <input type="number" step=0.1 name="prep" class= "form-control">
+     <%end%>
+  </div>
+  <div class="form-inline mb-3">
+     <%= f.label :name, class: "form-label mr-3" do %>
+       Cooking Time
+       <input type="number" step=0.1 name="cooking" class= "form-control">
+     <%end%>
+  </div>
+  <div class="form-inline mb-3">
+     <%= f.label :name, class: "form-label mr-3" do %>
+       Description
+       <input type="text" name="description" class= "form-control">
+     <%end%>
+  </div>
+
+<%= f.submit "Add new recipe", class: "btn btn-primary" %>
+<% end %>
+
+</div>

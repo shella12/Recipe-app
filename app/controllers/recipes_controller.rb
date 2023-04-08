@@ -3,6 +3,15 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all.where(user: current_user)
   end
 
+  def new
+    @recipe = Recipe.new
+  end
+
+  def create
+    @recipe = Recipe.new(user: current_user, name: params[:name], preparationTime: params[:prep], cookingTime: params[:cooking], description: params[:description], public: true)
+    redirect_to recipes_path, notice: 'New recipe has been added successfully!' unless @recipe.save
+  end
+
   def show
     @recipe = Recipe.find(params[:id])
     @recipes_food = RecipeFood.all.where(recipe: @recipe)
