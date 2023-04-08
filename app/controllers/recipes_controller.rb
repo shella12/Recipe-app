@@ -8,7 +8,8 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.new(user: current_user, name: params[:name], preparationTime: params[:prep], cookingTime: params[:cooking], description: params[:description], public: true)
+    @recipe = Recipe.new(user: current_user, name: params[:name], preparationTime: params[:prep],
+                         cookingTime: params[:cooking], description: params[:description], public: true)
     redirect_to recipes_path, notice: 'New recipe has been added successfully!' unless @recipe.save
   end
 
