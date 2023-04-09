@@ -4,7 +4,7 @@
 <div  class="d-flex justify-content-between" >
 <p>Preparation time: <%=@recipe.preparationTime%> hours</p>
 <% if can? :update, @recipe %>
-<%= form_with model: @recipes, url: toggle_public_path , id: 'toggle', method: :post do |form| %>
+<%= form_with model: @recipes, url: toggle_public_recipe_path , id: 'toggle', method: :post do |form| %>
 <div class="form-check form-switch">
  <%= form.label :public, class: "form-check-label mr-3" do %>
     <%= form.check_box :public, {checked: @recipe.public, class: "form-check-input"},true,false %>

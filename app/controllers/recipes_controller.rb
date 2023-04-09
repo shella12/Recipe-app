@@ -10,7 +10,9 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(user: current_user, name: params[:name], preparationTime: params[:prep],
                          cookingTime: params[:cooking], description: params[:description], public: true)
-    redirect_to recipes_path, notice: 'New recipe has been added successfully!' unless @recipe.save
+                         if @recipe.save
+    redirect_to recipes_path, notice: 'New recipe has been added successfully!'
+                         end
   end
 
   def show
@@ -23,10 +25,10 @@ class RecipesController < ApplicationController
     redirect_to recipes_path, notice: 'Recipe has been deleted successfully!'
   end
 
-  def toggle
+  def toggle_public
     @recipe = Recipe.find(params[:id])
     @recipe.toggle!(:public)
-    redirect_to recipes_detail_path(params[:id])
+    redirect_to recipe_path(params[:id])
   end
 
   def public_recipes

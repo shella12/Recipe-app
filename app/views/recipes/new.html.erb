@@ -1,5 +1,5 @@
 <div class="container-fluid">
-<%= form_with model: @recipe_food, url: add_new_recipe_path ,data: { turbo: false } do |f| %>
+<%= form_with model: @recipe, url: recipes_path , method: :post do |f| %>
 
 <h1 class="h3">Add New Recipe</h1>
 

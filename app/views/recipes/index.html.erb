@@ -1,15 +1,15 @@
 
 
 <div class="recipes-list">
-<%=button_to "Add Recipe", new_recipe_path(current_user.id), class: "btn btn-success m-3"%>
+<%=button_to "Add Recipe", new_recipe_path, method: :get, class: "btn btn-success m-3"%>
 <%@recipes.each_with_index do |recipe, index|%>
 <%= stylesheet_link_tag 'style' %>
 <div class="recipe">
 <div class="recipe-links">
 
-<%=link_to "Recipe #{index+1}", recipes_detail_path(recipe.id), class: "recipe-number"%>
+<%=link_to "Recipe #{index+1}", recipe_path(recipe.id), class: "recipe-number"%>
 <% if can? :destroy, recipe %>
-    <%= link_to "Remove", recipes_destroy_path(recipe.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+    <%= link_to "Remove", recipe_path(recipe.id), method: :delete, data: { confirm: "Are you sure you want to delete?" }, class: "btn btn-danger" %>
 <% end %>
 </div>
 <p><%=recipe.description%></p>
