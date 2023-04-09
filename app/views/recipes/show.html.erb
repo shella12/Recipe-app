@@ -20,7 +20,7 @@
 <div class="d-flex justify-content-between" >
 <%=link_to "Generate shopping list", general_shopping_list_path(@recipe)%>
 <% if can? :update, @recipe %>
-<%=link_to "Add Ingredients", new_ingredients_path(@recipe.id)%>
+<%=link_to "Add Ingredients", new_recipe_food_path(id: @recipe.id)%>
 <% end %>
 </div>
 <hr>
@@ -45,8 +45,8 @@
       <%end%>
       <% if can? :update, @recipe%>
       <td>
-       <%=link_to "Edit",edit_ingredients_path(id:@recipe.id, ingredient_id: ingredient.id), class: "btn btn-primary" %>
-       <%=link_to "Delete",recipes_food_destroy_path(id:@recipe.id, ingredient_id: ingredient.id),method: :delete ,class: "btn btn-danger" %>
+       <%=link_to "Edit",edit_recipe_food_path(id:@recipe.id, ingredient_id: ingredient.id), class: "btn btn-primary" %>
+       <%=link_to "Delete",recipe_food_path(id:@recipe.id, ingredient_id: ingredient.id),method: :delete ,class: "btn btn-danger" %>
       </td>
     <%end%>
     </tr>

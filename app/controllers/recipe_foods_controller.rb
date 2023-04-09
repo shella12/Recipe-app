@@ -10,7 +10,6 @@ class RecipeFoodsController < ApplicationController
     quantities = params[:quantity]
     selected_checkboxes = foods.zip(quantities)
     selected_checkboxes.each do |food|
-      puts food
       @save = RecipeFood.new(food: food[0], recipe: Recipe.find(params[:id]), quantity: food[1].to_i)
       puts @save.errors.full_messages unless @save.save
     end

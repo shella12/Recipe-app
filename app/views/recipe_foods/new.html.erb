@@ -1,5 +1,5 @@
 <div class="container-fluid">
-<%= form_with(model: @recipe_food, url: add_ingredients_path(params[:id])) do |f| %>
+<%= form_with model: @recipe_food, url: recipe_foods_path(id: params[:id]), method: :post do |f| %>
 
 <div class="d-flex justify-content-between align-items-center">
 <h1 class="h3">Add New Ingredients</h1>
