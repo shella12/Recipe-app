@@ -20,8 +20,7 @@ RSpec.feature 'RecipeList', type: :system do
       expect(page).to have_content(recipe.description.to_s)
       click_link('Edit')
       sleep(1)
-      expect(current_path).to eq(edit_ingredients_path(id: recipe.id, ingredient_id: recipe_food.id))
-      page.go_back
+      expect(current_path).to eq(edit_recipe_food_path(id: recipe.id))
       click_link('Delete')
       expect(page).to have_content('Ingredient has been deleted successfully!')
     end
