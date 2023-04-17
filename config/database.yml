@@ -80,7 +80,5 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: recipe_app_production
-  username: recipe_app
-  password: <%= ENV["APPNAME_DATABASE_PASSWORD"] %>
+   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
