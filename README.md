@@ -60,7 +60,7 @@ With the **Recipe app**, you can organize and manage your cooking with ease. You
 
 ### Live demo <a name="live-demo"></a>
 
-Click link to see [live demo](https://myrecipes-mv07.onrender.com)
+Click link to see [live demo](https://ayesha-recipe.up.railway.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
